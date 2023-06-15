@@ -1,0 +1,106 @@
+body{
+  background-color: pink;
+  color: #ddd;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+main{
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+form{
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  display:flex;
+}
+form input[type="text"] {
+  background: none;
+  color: white;
+  border:0;
+  padding: 0 8px;
+  display:block;
+  width: 100%;
+}
+
+form button{
+  background-color: hotpink;
+  border:0;
+  border-radius: 6px;
+  cursor:pointer;
+}
+
+div.task{
+  background-color: black;
+  border-radius: 10px;
+  padding: 5px 9px;
+  margin-top: 5px;
+  display:flex;
+  align-items: center;
+  transition: opacity .3s linear;
+}
+div.task svg{
+  height: 20px;
+  margin-right: 6px;
+  fill: white;
+}
+div.task.done{
+  opacity: 0.3;
+}
+div.task-name, div.task form{
+  flex-grow:1;
+}
+div.task span{
+  position:relative;
+}
+div.task span:before{
+  content:'';
+  display:block;
+  width:0;
+  height:1px;
+  background-color: white;
+  position:absolute;
+  top: 10px;
+  transition: width .1s linear;
+}
+div.task.done span:before{
+  width: 100%;
+}
+
+h1, h2{
+  text-align: center;
+  color: black;
+}
+
+div.checkbox{
+  display:flex;
+  align-items: center;
+}
+
+button.trash{
+  background:none;
+  border:none;
+  display:flex;
+  cursor:pointer;
+}
+button.trash svg{
+  fill: white;
+  height: 14px;
+}
+div.task input{
+  border: 2px solid white;
+  border-radius:5px;
+  padding: 2px 4px;
+}
+
+form input[type="text"]::placeholder {
+  color: black;
+}
+
+#AddToDoList {
+  color: black;
+}
